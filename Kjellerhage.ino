@@ -9,6 +9,16 @@
   
 */
 
+int s = (1000);
+int m = s*60;
+int h = m*60;
+int d = h*24;
+
+int seconds = s;
+int minutes = m;
+int hours = h;
+int days = d;
+
 int moistureSensor1 = A0;     // Sensor for measuring the moisture in White Ghost 1
 int moistureSensor2 = A1;     // Sensor for measuring the moisture in White Ghost 2
 int moistureSensor3 = A2;     // Sensor for measuring the moisture in White Ghost 3
@@ -94,32 +104,31 @@ void setup() {
 
 void loop() {
 
-val1 = analogRead(moistureSensor1);
-val2 = analogRead(moistureSensor2);
-val3 = analogRead(moistureSensor3);
-val4 = analogRead(moistureSensor4);
-val5 = analogRead(moistureSensor5);
-val6 = analogRead(moistureSensor6);
-val7 = analogRead(moistureSensor7);
-val8 = analogRead(moistureSensor8);
-val9 = analogRead(moistureSensor9);
-val10 = analogRead(moistureSensor10);
-val11 = analogRead(moistureSensor11);
-val12 = analogRead(moistureSensor12);
-val13 = analogRead(moistureSensor13);
-val14 = analogRead(moistureSensor14);
-val15 = analogRead(moistureSensor15);
-val16 = analogRead(moistureSensor16);
+  digitalWrite(fan1, HIGH);
+  digitalWrite(fan2, HIGH);
+  digitalWrite(fan3, HIGH);
 
-if(val1 < 20 and val2 < 20 and val3 < 20) digitalWrite(valve1, LOW); else digitalWrite(valve1, HIGH);
-if(val2 = 20) digitalWrite(valve1, HIGH);
-if(val3 = 20) digitalWrite(valve1, HIGH);
-if(val4 = 30) digitalWrite(valve2, HIGH);
-if(val5 = 30) digitalWrite(valve2, HIGH);
-if(val6 = 30) digitalWrite(valve2, HIGH);
-if(val7 = 40) digitalWrite(valve3, HIGH);
-if(val8 = 40) digitalWrite(valve3, HIGH);
+  if(valve1 == HIGH or valve2 == HIGH or valve3 == HIGH); digitalWrite(pump1, HIGH);
+  
+  val1 = analogRead(moistureSensor1);
+  val2 = analogRead(moistureSensor2);
+  val3 = analogRead(moistureSensor3);
+  val4 = analogRead(moistureSensor4);
+  val5 = analogRead(moistureSensor5);
+  val6 = analogRead(moistureSensor6);
+  val7 = analogRead(moistureSensor7);
+  val8 = analogRead(moistureSensor8);
+  val9 = analogRead(moistureSensor9);
+  val10 = analogRead(moistureSensor10);
+  val11 = analogRead(moistureSensor11);
+  val12 = analogRead(moistureSensor12);
+  val13 = analogRead(moistureSensor13);
+  val14 = analogRead(moistureSensor14);
+  val15 = analogRead(moistureSensor15);
+  val16 = analogRead(moistureSensor16);
 
-
+  if(val1 < 800 and val2 < 800 and val3 < 800) digitalWrite(valve1, LOW); else digitalWrite(valve1, HIGH);
+  if(val4 < 800 and val5 < 800 and val6 < 800) digitalWrite(valve2, LOW); else digitalWrite(valve2, HIGH);
+  if(val7 < 800 and val8 < 800 and val3 < 800) digitalWrite(valve3, LOW); else digitalWrite(valve3, HIGH);
 
 }
