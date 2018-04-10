@@ -8,16 +8,17 @@
 
   
 */
+    // Declaring milliseconds in common units of time
 
 int s = (1000);
 int m = s*60;
 int h = m*60;
 int d = h*24;
 
-int seconds = s;
-int minutes = m;
-int hours = h;
-int days = d;
+int seconds = s;              // Seconds can be shortened as s, or written as seconds
+int minutes = m;              // Minutes can be shortened as m, or written as minutes
+int hours = h;                // Hours can be shortened as h, or written as hours
+int days = d;                 // Days can be shortened as d, or written as days
 
 int moistureSensor1 = A0;     // Sensor for measuring the moisture in White Ghost 1
 int moistureSensor2 = A1;     // Sensor for measuring the moisture in White Ghost 2
