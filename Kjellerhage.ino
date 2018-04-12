@@ -34,25 +34,8 @@ int moistureSensor11 = A10;   // Sensor for measuring the moisture in Black Oliv
 int moistureSensor12 = A11;   // Sensor for measuring the moisture in Black Olives Pepper 2
 int moistureSensor13 = A12;   // Sensor for measuring the moisture in Ring of Fire 1
 int moistureSensor14 = A13;   // Sensor for measuring the moisture in Ring of Fire 2
-int moistureSensor15 = A14;
-int moistureSensor16 = A15;
-
-int val1 = 0;
-int val2 = 0;
-int val3 = 0;
-int val4 = 0;
-int val5 = 0;
-int val6 = 0;
-int val7 = 0;
-int val8 = 0;
-int val9 = 0;
-int val10 = 0;
-int val11 = 0;
-int val12 = 0;
-int val13 = 0;
-int val14 = 0;
-int val15 = 0;
-int val16 = 0;
+int moistureSensor15 = A14;   // Sensor for measuring the moisture in *****
+int moistureSensor16 = A15;   // Sensor for measuring the moisture in *****
 
 int pump1 = 2;               // Pump for watering the plants
 
@@ -64,6 +47,9 @@ int valve4 = 6;              // Solenoid valve for Herbs
 int fan1 = 7;                 // Fan for main chamber
 int fan2 = 8;                 // Fan for secondary high chamber
 int fan3 = 9;                 // Fan for secondary low chamber
+
+int pthscl = 21;             // Connect the SCL pin to Mega2560 I/O-pin 21
+int pthsda = 20;             // Connect the SDA pin to Mega2560 I/O-pin 20
 
 void setup() {
   // declare the moisture sensors as INPUTS:
@@ -111,25 +97,27 @@ void loop() {
 
   if(valve1 == HIGH or valve2 == HIGH or valve3 == HIGH); digitalWrite(pump1, HIGH);
   
-  val1 = analogRead(moistureSensor1);
-  val2 = analogRead(moistureSensor2);
-  val3 = analogRead(moistureSensor3);
-  val4 = analogRead(moistureSensor4);
-  val5 = analogRead(moistureSensor5);
-  val6 = analogRead(moistureSensor6);
-  val7 = analogRead(moistureSensor7);
-  val8 = analogRead(moistureSensor8);
-  val9 = analogRead(moistureSensor9);
-  val10 = analogRead(moistureSensor10);
-  val11 = analogRead(moistureSensor11);
-  val12 = analogRead(moistureSensor12);
-  val13 = analogRead(moistureSensor13);
-  val14 = analogRead(moistureSensor14);
-  val15 = analogRead(moistureSensor15);
-  val16 = analogRead(moistureSensor16);
+  moistureSensor1 = analogRead(moistureSensor1);
+  moistureSensor2 = analogRead(moistureSensor2);
+  moistureSensor3 = analogRead(moistureSensor3);
+  moistureSensor4 = analogRead(moistureSensor4);
+  moistureSensor5 = analogRead(moistureSensor5);
+  moistureSensor6 = analogRead(moistureSensor6);
+  moistureSensor7 = analogRead(moistureSensor7);
+  moistureSensor8 = analogRead(moistureSensor8);
+  moistureSensor9 = analogRead(moistureSensor9);
+  moistureSensor10 = analogRead(moistureSensor10);
+  moistureSensor11 = analogRead(moistureSensor11);
+  moistureSensor12 = analogRead(moistureSensor12);
+  moistureSensor13 = analogRead(moistureSensor13);
+  moistureSensor14 = analogRead(moistureSensor14);
+  moistureSensor15 = analogRead(moistureSensor15);
+  moistureSensor16 = analogRead(moistureSensor16);
 
-  if(val1 < 800 and val2 < 800 and val3 < 800) digitalWrite(valve1, LOW); else digitalWrite(valve1, HIGH);
-  if(val4 < 800 and val5 < 800 and val6 < 800) digitalWrite(valve2, LOW); else digitalWrite(valve2, HIGH);
-  if(val7 < 800 and val8 < 800 and val3 < 800) digitalWrite(valve3, LOW); else digitalWrite(valve3, HIGH);
+  if(moistureSensor1 < 800 and moistureSensor2 < 800 and moistureSensor3 < 800) digitalWrite(valve1, LOW); else digitalWrite(valve1, HIGH);
+  if(moistureSensor4 < 800 and moistureSensor5 < 800 and moistureSensor6 < 800) digitalWrite(valve2, LOW); else digitalWrite(valve2, HIGH);
+  if(moistureSensor7 < 800 and moistureSensor8 < 800 and moistureSensor3 < 800) digitalWrite(valve3, LOW); else digitalWrite(valve3, HIGH);
+
+  
 
 }
