@@ -26,12 +26,12 @@ int moistureSensor14 = A13;   // Sensor for measuring the moisture in Ring of Fi
 int moistureSensor15 = A14;
 int moistureSensor16 = A15;
 
-bool pump1 = 2;               // Pump for watering the plants
+int pump1 = 2;               // Pump for watering the plants
 
-bool valve1 = 3;              // Solenoid soilve for White Ghost
-bool valve2 = 4;              // Solenoid soilve for Schotch Bonnet
-bool valve3 = 5;              // Solenoid soilve for Bulgarian Carrot
-bool valve4 = 6;              // Solenoid soilve for Herbs
+int valve1 = 3;              // Solenoid valve for White Ghost
+int valve2 = 4;              // Solenoid valve for Schotch Bonnet
+int valve3 = 5;              // Solenoid valve for Bulgarian Carrot
+int valve4 = 6;              // Solenoid valve for Herbs
 
 int fan1 = 7;                 // Fan for main chamber
 int fan2 = 8;                 // Fan for secondary high chamber
